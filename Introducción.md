@@ -1,142 +1,203 @@
-# Sobre la verdad en la era digital
-El presente repositorio tiene como objetivo el determinar la validez de la información contenida en los entornos digitales.
+# Introducción a la Validación de Información Digital
 
-## Introducción
-Desde los comienzos del internet, han existido espacios digitales en donde se comparte y se desarrolla la información. Los cuales son altamente utilizados para su consulta con diferentes fines (educativo, informativo, profesional, etc.). Cada contenido está creado tanto por autores independientes (con acceso a recursos y dominios) como por entidades formales de gobierno, empresas de diferentes industrias, entre otras.
+## Objetivo del Documento
+Este documento sirve como la piedra angular teórica y práctica para el proyecto de validación de fuentes. Su propósito es establecer un marco de referencia riguroso que permita distinguir entre datos, información, conocimiento y ruido en el entorno digital, proveyendo las herramientas necesarias para un análisis sociopolítico fundamentado en la verdad verificable.
 
-Para cada fuente de información es crucial validar su autoría, actualización, objetividad, citas, referencias y propósito. Sin este rigor, navegamos a ciegas ante la información que se nos presenta.
+---
 
-Actualmente, el surgimiento de la inteligencia artificial generativa y el uso común de los Grandes Modelos de Lenguaje (LLMs) como fuentes de consulta requiere de un pensamiento crítico agudo y una validación de fuentes con mayor rigurosidad, debido a fenómenos como las "alucinaciones" (generación de información falsa o inexacta) inherentes a estos modelos probabilísticos.
+## 1. Epistemología: La Ciencia de la Verdad y la Justificación
+Para validar información, primero debemos entender qué constituye el "conocimiento".
 
-## Sobre el conocimiento y su estudio
-Para poder validar el contenido es fundamental enunciar los conceptos básicos del conocimiento y su estudio.
-El estudio del conocimiento se conoce como *Epistemología*.
+### Definición Formal
+La **epistemología** (del griego *episteme*, conocimiento, y *logos*, estudio) es la rama de la filosofía que estudia la naturaleza, el origen y el alcance del conocimiento. Según la *Stanford Encyclopedia of Philosophy*, se ocupa de tres preguntas centrales: ¿Qué es el conocimiento? ¿Cómo se adquiere? ¿Cómo se justifica? [1].
 
-### ¿Qué es la epistemología y por qué es importante para este proyecto?
-La **epistemología** (del griego *episteme*, "conocimiento", y *logos*, "estudio") es la rama de la filosofía que estudia la naturaleza, el origen y el alcance del conocimiento. Se ocupa de problemas tales como las circunstancias históricas, psicológicas y sociológicas que llevan a la obtención del conocimiento, y los criterios por los cuales se le justifica o invalida, así como la definición clara y precisa de los conceptos epistémicos más usuales, tales como verdad, objetividad, realidad o justificación.
+### Doxa vs. Episteme
+Una distinción crítica para este proyecto es la diferenciación platónica:
+*   **Doxa (Opinión):** Creencia subjetiva, no justificada. Es el reino de los comentarios en redes sociales, rumores y "fake news".
+*   **Episteme (Conocimiento Justificado):** Creencia verdadera y justificada. Requiere evidencia, lógica y validación. Este es el objetivo de nuestro sistema.
 
-Para este proyecto, la epistemología es el pilar fundamental que nos permite establecer un marco de validación. No basta con consumir información; debemos interrogarnos sobre **cómo sabemos que lo que leemos es verdad**. En un entorno digital saturado de posverdad y desinformación, aplicar criterios epistemológicos nos permite diferenciar entre *doxa* (mera opinión) y *episteme* (conocimiento justificado), asegurando que los análisis sociopolíticos subsiguientes se basen en datos verificables y no en conjeturas.
+---
 
-## Sobre la información y su contenido.
-Información es el nombre por el que se conoce un conjunto organizado de datos procesados que constituyen un mensaje que cambia el estado de conocimiento del sujeto o sistema que recibe dicho mensaje.
+## 2. Jerarquía DIKW
+El modelo DIKW (*Data, Information, Knowledge, Wisdom*) nos permite categorizar los insumos que procesamos. Originado en la poesía de T.S. Eliot y formalizado por Zeleny y Ackoff [2]:
 
-### Jerarquía DIKW
-Es esencial comprender la estructura del conocimiento a través de la jerarquía DIKW (Data, Information, Knowledge, Wisdom):
+1.  **Datos (Data):** Hechos crudos, símbolos sin contexto. (Ej: "35", "Rojo").
+2.  **Información (Information):** Datos procesados con relaciones y contexto. Responde a "¿Quién?", "¿Qué?", "¿Dónde?". (Ej: "La temperatura es 35°C").
+3.  **Conocimiento (Knowledge):** Información aplicada y entendida. Responde a "¿Cómo?". (Ej: "A 35°C, el rendimiento de los servidores disminuye sin refrigeración").
+4.  **Sabiduría (Wisdom):** Juicio evaluativo sobre el conocimiento. Responde a "¿Por qué?" y "¿Qué debemos hacer?". (Ej: "Debemos mejorar el sistema de enfriamiento para prevenir fallos a largo plazo").
 
-**Datos -> (Contexto) -> Información -> (Significado) -> Conocimiento -> (Entendimiento/Juicio) -> Sabiduría**
+---
 
-1.  **Datos:** Símbolos que representan propiedades o características de la realidad (ej. "30°C"). Son la materia prima sin procesar.
-2.  **Información:** Datos procesados y organizados dentro de un contexto específico que les otorga significado (ej. "La temperatura ambiente es de 30°C").
-3.  **Conocimiento:** Información interiorizada y entendida, que permite la toma de decisiones o la resolución de problemas (ej. "A 30°C, el rendimiento de ciertos equipos disminuye").
-4.  **Sabiduría:** El uso juicioso del conocimiento para tomar decisiones éticas y visionarias a largo plazo.
+## 3. Teoría Matemática de la Información (Shannon)
+La base técnica de la comunicación digital reside en el trabajo seminal de Claude Shannon.
 
-Desde el punto de vista de la ciencia de la computación, la información es un conocimiento explícito extraído como resultado de interacción con el entorno. A diferencia de los datos puros, la información posee una estructura útil que modifica las sucesivas interacciones del receptor.
+### Origen
+En 1948, Claude Shannon publicó *"A Mathematical Theory of Communication"* [3], estableciendo las leyes fundamentales que rigen la transmisión de datos.
 
-### Teoría de la Información (Shannon & Weaver - 1948)
-La Teoría Matemática de la Comunicación, publicada por Claude Shannon en 1948 (y posteriormente en libro junto a Warren Weaver en 1949), establece las leyes matemáticas que rigen la transmisión y el procesamiento de la información. Se ocupa de la medición de la información (cuantificada en bits) y de la capacidad de los sistemas de comunicación para transmitirla de manera fiable, considerando el ruido. Es una rama fundamental de la teoría de la probabilidad y la estadística.
+### Conceptos Fundamentales
+1.  **Entropía ($H$):** Medida de la incertidumbre o aleatoriedad en una fuente de información. Cuanto mayor es la entropía, mayor es la información contenida en un mensaje (porque es menos predecible).
+    *   **Fórmula:** $H(X) = - \sum_{i} p(x_i) \log_2 p(x_i)$
+    *   Donde $p(x_i)$ es la probabilidad de que ocurra el evento $x_i$ (símbolo). Se mide en bits [3][4].
 
-### Tipos de información
-Los tipos de información se pueden clasificar de la siguiente manera:
+2.  **Ruido:** Cualquier señal indeseada que interfiere con la transmisión del mensaje original. En nuestro contexto, el "ruido" también puede ser desinformación o sesgo que distorsiona la verdad.
 
-#### Según su Naturaleza/Contenido
-*   **Fáctica:** Basada en hechos verídicos, verificables y objetivos (ej. datos científicos, estadísticas oficiales).
-*   **Analítica:** Interpretación, inferencia o análisis derivado de datos fácticos.
-*   **Instructiva:** Transmite requerimientos, órdenes o procedimientos a realizar.
+3.  **Capacidad del Canal ($C$):** El límite superior de la tasa de información que se puede transmitir de manera fiable sobre un canal de comunicación ruidoso.
 
-#### Según el Acceso y Confidencialidad
-*   **Pública:** Accesible para cualquier persona sin restricciones.
-*   **Privada/Personal:** Perteneciente a un individuo; su acceso está controlado por el titular.
-*   **Confidencial/Privilegiada:** Restringida a un grupo selecto debido a su sensibilidad (secretos comerciales, seguridad nacional, historiales médicos).
+4.  **Redundancia:** Parte del mensaje que no aporta nueva información pero que es esencial para detectar y corregir errores causados por el ruido.
 
-#### Según el Origen (Organizaciones)
-*   **Interna:** Producida dentro de una organización para el consumo y gestión de la misma.
-*   **Externa:** Generada fuera de la organización o dirigida al público general.
+### Teoremas Principales
+1.  **Teorema de Codificación de Fuente (Teorema de Codificación sin Ruido):** Establece que es imposible comprimir datos de manera que la tasa de código promedio sea menor que la entropía de la fuente sin perder información. Define el límite fundamental de la compresión de datos [4].
+    
+2.  **Teorema de Codificación de Canal Ruidoso:** Demuestra que si la tasa de transmisión de información ($R$) es menor que la capacidad del canal ($C$), existe un esquema de codificación tal que la probabilidad de error en el receptor puede hacerse arbitrariamente pequeña. Si $R > C$, la transmisión libre de errores es imposible [5].
 
-#### Según la Fuente
-*   **Primaria:** Información original de primera mano (testimonios, fotografías sin editar, documentos oficiales, *papers* de investigación originales).
-*   **Secundaria:** Información procesada, interpretada o sintetizada a partir de fuentes primarias (libros de texto, artículos periodísticos, enciclopedias).
-*   **Terciaria:** Bibliografías, catálogos o índices que reúnen y organizan fuentes primarias y secundarias.
+---
 
-#### Según el Formato
-*   **Texto, Visual, Auditiva y Audiovisual:** Imágenes, mapas, sonidos, videos, contenido multimedia interactivo.
+## 4. Tipos de Información Digital
 
-## Normatividad de la información digital
-Aunque internet trasciende fronteras físicas, la gestión de datos está sujeta a normativas regionales que buscan proteger la privacidad y seguridad de los usuarios.
+| Tipo | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| **Pública/Abierta** | Accesible por cualquier persona sin restricciones. | Comunicados oficiales, leyes. |
+| **Privada/Cerrada** | Restringida a un grupo específico o individuo. | Mensajes directos, correos internos. |
+| **Gubernamental** | Generada por entidades del estado. | Datos del INEGI, Diario Oficial. |
+| **Corporativa** | Generada por empresas privadas. | Reportes financieros, comunicados de prensa. |
+| **Académica** | Producida por instituciones educativas/científicas. | Papers, tesis, estudios revisados por pares. |
+| **Generada por Usuario (UGC)** | Contenido creado por individuos en plataformas. | Tweets, Posts de Facebook, Videos de TikTok. |
 
-### Regulaciones Gubernamentales
-Estas reglas están determinadas por instituciones de estado y organizaciones supranacionales:
+---
 
-| Instituto Emisor | Ley o Norma | Acción / Objetivo | Fecha de Entrada en Vigor | Tipo de Datos |
-| :---: | :---: | :---: | :---: | :---: |
-| Unión Europea | **GDPR** (General Data Protection Regulation) | Regula el tratamiento de datos personales y la privacidad de los ciudadanos de la UE, con alcance extraterritorial. | 25/05/2018 | Privada/Personal |
-| Gobierno Mexicano | **LFPDPPP** (Ley Federal de Protección de Datos Personales en Posesión de los Particulares) | Regula el tratamiento legítimo, controlado e informado de los datos personales para garantizar la privacidad y el derecho a la autodeterminación informativa. | 06/07/2010 | Privada/Personal |
-| Gobierno Mexicano | **Ley Olimpia** | Conjunto de reformas legislativas que reconocen y sancionan la violencia digital y los delitos contra la intimidad sexual (difusión sin consentimiento). | 02/06/2021 (Federal) | Privada/Personal/Intima |
+## 5. Normatividad Digital y Regulaciones
+Tabla comprensiva de las leyes que rigen el espacio digital en México y el mundo.
 
-### Plataformas Digitales
-Un entorno virtual o infraestructura tecnológica que conecta a diferentes grupos de usuarios para facilitar interacciones. Se rigen por sus propios Términos de Servicio (ToS), los cuales actúan como contratos de adhesión.
+| Regulación | Jurisdicción | Fecha | Objetivo Principal | Referencia |
+| :--- | :--- | :--- | :--- | :--- |
+| **GDPR** (Reglamento General de Protección de Datos) | Unión Europea | 2018 (Vigencia) | Proteger la privacidad y datos personales de ciudadanos de la UE. | [6] |
+| **Digital Services Act (DSA)** | Unión Europea | 2024 (Plena) | Regular contenido ilegal, transparencia en moderación y algoritmos. | [7] |
+| **Section 230 (CDA)** | Estados Unidos | 1996 | Inmunidad a plataformas por contenido de terceros ("No son editores"). | [8] |
+| **CLOUD Act** | Estados Unidos | 2018 | Permite a fuerzas de ley de EE.UU. pedir datos a empresas tecnológicas sin importar dónde estén almacenados. | [9] |
+| **LFPDPPP** | México | 2010 / 2025 | Regular el tratamiento de datos personales por particulares. | [10] |
+| **Ley Olimpia** | México | 2021 | Sancionar la violencia digital y delitos contra la intimidad sexual. | [11] |
+| **LFTR (Art. Neutralidad)** | México | 2014 | Garantizar la neutralidad de la red y libre acceso a contenidos (Arts. 145-146). | [12] |
+| **LFDA (Notificación y Retirada)** | México | 2020 | Mecanismo para retirar contenido que infrinja derechos de autor ("Notice and Takedown") tras T-MEC. | [13] |
 
-#### Motores de Búsqueda
-Sistemas informáticos que buscan archivos almacenados en servidores web mediante "arañas" (crawlers).
+---
 
-**Ejemplos de Motores de Búsqueda:**
+## 6. Plataformas Digitales: Términos de Servicio (TOS)
+Análisis de los Términos de Servicio explícitos respecto a la propiedad del contenido y uso de datos.
 
-| Motor | Lanzamiento | Empresa Matriz | Resumen de Algoritmo / Enfoque |
-| :---: | :---: | :---: | :--- |
-| **Google** | 1998 | Alphabet Inc. | Utiliza cientos de factores (PageRank, RankBrain, BERT) enfocados en relevancia, calidad del contenido, experiencia de usuario y autoridad del sitio. Integra IA para entender la intención semántica. |
-| **Bing** | 2009 | Microsoft | Enfatiza la autoridad de la página, la calidad del contenido y la integración profunda con IA generativa (Copilot). |
-| **Baidu** | 2000 | Baidu, Inc. | Dominante en China. Prioriza sitios alojados en China y contenido en mandarín. Fuerte procesamiento de lenguaje natural para chino. |
-| **Yandex** | 1997 | Yandex N.V. / IJSC Yandex | Dominante en Rusia. Utiliza "MatrixNet" (Machine Learning). Excelente en morfología rusa y búsquedas geo-localizadas. |
-| **Yahoo** | 1995 | Yahoo Inc. (Apollo) | Actualmente utiliza el índice y algoritmo de Bing para sus resultados orgánicos, complementado con algoritmos propios de presentación de contenido (C.O.R.E.). |
-| **DuckDuckGo** | 2008 | Duck Duck Go, Inc. | Enfocado en la **privacidad**. No rastrea ni perfila usuarios. Agrega resultados de múltiples fuentes (principalmente Bing) pero aplica sus propios filtros de privacidad. |
+### Motores de Búsqueda
 
-#### Redes Sociales
-Plataformas que permiten crear comunidades e interactuar en tiempo real.
+#### Google
+*   **Propiedad:** El usuario retiene derechos de propiedad intelectual ("Lo que es tuyo, sigue siendo tuyo").
+*   **Licencia Otorgada:** Licencia mundial, no exclusiva y libre de regalías para usar, alojar, almacenar, reproducir, modificar y crear obras derivadas.
+*   **Finalidad:** Operar, promocionar y mejorar servicios, y desarrollar nuevos [14].
 
-**Redes Sociales Populares:**
+#### Bing (Microsoft)
+*   **Propiedad:** No reclama propiedad del contenido del usuario.
+*   **Licencia Otorgada:** Licencia mundial libre de regalías para usar, reproducir, guardar, modificar, y mostrar el contenido.
+*   **Uso de Datos:** Datos de búsqueda pueden usarse para entrenar modelos de IA y mejorar Servicios Cognitivos [15].
 
-| Plataforma | Empresa Matriz | Enfoque Principal | Tipo de Algoritmo / Filtrado |
-| :---: | :---: | :---: | :--- |
-| **Facebook** | Meta Platforms | Red Social General | **Social Graph & Interest Graph:** Prioriza contenido de amigos/familia y contenido que genera "interacciones significativas" (comentarios, compartidos). Fuerte moderación automatizada y humana. |
-| **YouTube** | Alphabet (Google) | Video | **Deep Learning Recommendation:** Optimiza para "tiempo de visualización" y "satisfacción" a largo plazo. Predice qué video es más probable que el usuario vea completo. |
-| **Instagram** | Meta Platforms | Visual (Foto/Video) | Algoritmos múltiples para Feed, Stories y Reels. Prioriza la "novedad", la relación con el autor y el interés demostrado en contenidos visuales similares. |
-| **TikTok** | ByteDance | Video Corto | **Interest-Based recommendation:** Extremadamente personalizado. Analiza micro-interacciones (tiempo de vista, repeticiones) para descubrir intereses muy específicos, independientemente del gráfico social. |
-| **WhatsApp** | Meta Platforms | Mensajería | **Encriptación E2E (Signal Protocol):** No hay algoritmo de recomendación de contenido en chats privados. En canales/negocios, puede haber ordenamiento básico. Privacidad como eje central. |
-| **LinkedIn** | Microsoft | Profesional | Prioriza contenido relevante profesionalmente, actualizaciones de la red y contenido que fomente "conversaciones constructivas". |
+#### Baidu
+*   **Propiedad:** Baidu posee todos los derechos sobre sus tecnologías.
+*   **Contenido:** El usuario es responsable de no infringir derechos. Si se usa Baidu AI Cloud, los derechos permanecen con el usuario, pero Baidu no controla el contenido.
+*   **Estricto:** Fuertes cláusulas contra piratería y responsabilidad del usuario de indemnizar a Baidu [16].
 
-### Consideraciones sobre el Contenido y la Moderación
-¿Qué más debemos saber sobre los datos en estas plataformas?
-1.  **Cajas Negras:** Los algoritmos son secretos industriales. No sabemos con exactitud por qué se prioriza un contenido sobre otro, lo que puede generar sesgos invisibles.
-2.  **Shadowbanning:** La práctica de limitar la visibilidad de un usuario sin notificarle. Suele aplicarse a cuentas que rozan los límites de las normas comunitarias o tratan temas polémicos.
-3.  **Filtros de Contenido:** Temas como violencia explicita, incitación al odio, desinformación médica (ej. anti-vacunas), y contenido sexual suelen ser penalizados o eliminados. Sin embargo, la definición de "discurso de odio" o "polémico" puede variar subjetivamente según la plataforma y la región.
-4.  **Recolección de Datos:** La mayoría de estas plataformas (excepto las centradas en privacidad como DuckDuckGo) recolectan metadatos exhaustivos: ubicación, dispositivo, historial de navegación externo, y patrones biométricos de comportamiento para crear perfiles publicitarios detallados.
+#### Yandex
+*   **Licencia:** Varía por servicio. Para Yandex Disk ("Memories"), licencia no exclusiva a Yandex.
+*   **Análisis:** Yandex se reserva el derecho de analizar archivos buscando malware o para mejorar seguridad.
+*   **Acuerdo:** El usuario es completamente responsable de la legalidad de su contenido [17].
 
-### Sitios Informativos / Noticias
-Fuentes cruciales para el análisis sociopolítico:
-*   **Internacionales:** BBC, CNN, The New York Times, Reuters, The Guardian.
-*   **Nacionales (México):** El Universal, La Jornada, Aristegui Noticias, Milenio, El Financiero, Animal Político, SinEmbargo.
+#### DuckDuckGo
+*   **Propiedad (Duck.ai):** Usuario mantiene derechos sobre Inputs y Outputs.
+*   **Privacidad:** "No te rastreamos". No reclaman propiedad sobre contenido de terceros mostrado (Instant Answers).
+*   **Responsabilidad:** No garantizan exactitud de contenido de terceros [18].
 
-## Validez de la información
-La información tendrá un rango de validez de forma granular con base en indicadores que nos ayuden a determinar la neutralidad, el fondo e intención de la información.
+### Redes Sociales
 
-De forma general podemos utilizar los siguientes indicadores:
+#### Facebook (Meta)
+*   **Propiedad:** Usuario retiene propiedad intelectual.
+*   **Licencia:** Licencia mundial, no exclusiva, transferible, sublicenciable y libre de regalías para usar, distribuir, modificar, ejecutar, copiar, y mostrar públicamente.
+*   **Uso:** Para operar y mejorar productos Meta. Incluye uso en anuncios sin compensación directa [19].
+*   **IA:** Meta puede usar contenido público para entrenar sus modelos de IA.
 
-### Indicadores Generales (Epistemológicos)
-*   **Correspondencia:** ¿Describe hechos observables y comprobables en la realidad?
-*   **Coherencia:** ¿El argumento es lógico internamente o se contradice?
-*   **Consistencia:** ¿Coincide con otras fuentes independientes y confiables?
-*   **Falsabilidad:** ¿La afirmación está estructurada de tal manera que podría ser refutada con evidencia? (Criterio de Popper).
-*   **Reproducibilidad:** ¿Otros investigadores pueden llegar a la misma conclusión siguiendo el mismo método?
+#### YouTube (Google)
+*   **Licencia:** Licencia mundial, no exclusiva, libre de regalías y sublicenciable a YouTube.
+*   **Monetización:** YouTube tiene derecho a monetizar todo el contenido (poner anuncios) aunque el creador no esté en el Programa de Socios (YPP).
+*   **Restricciones:** Prohibido subir contenido sin derechos de autor o permisos comerciales [20].
 
-### Indicadores para el Entorno Digital
-*   **Autoría y Autoridad:** ¿Quién lo dice? ¿Es un experto en el campo o una cuenta anónima?
-*   **Incentivos:** ¿Tiene la fuente un conflicto de interés (económico, político)? Diferenciar entre información y propaganda/publicidad.
-*   **Trazabilidad:** ¿Se cita la fuente primaria? ¿Hay hipervínculos funcionales a la evidencia?
-*   **Temporalidad:** ¿La información está vigente? Muchas "fake news" son noticias reales antiguas sacadas de contexto.
-*   **Amplificación Artificial:** ¿Es popular orgánicamente o mediante granjas de bots? (Revisar patrones de publicación y cuentas recién creadas).
-*   **Lenguaje:** El uso de lenguaje altamente emotivo, polarizante o simplista es una señal de alerta (*Clickbait*).
+#### Instagram (Meta)
+*   **Propiedad:** Igual que Facebook, usuario retiene propiedad.
+*   **Licencia:** Amplia, no exclusiva, totalmente pagada y libre de regalías, transferible y mundial.
+*   **Datos:** Recolección extensiva de metadatos y uso para personalización y anuncios [21].
 
-### Herramientas y Técnicas de Verificación
-*   **Fact-Checking:** Consultar organizaciones dedicadas a la verificación (ej. Verificado, Snopes).
-*   **Búsqueda Inversa de Imágenes:** Verificar si una imagen ha sido manipulada o usada en otro contexto (Google Images, TinEye).
-*   **Análisis de Metadatos:** Examinar la información oculta en archivos digitales.
-*   **Escepticismo Metódico:** Asumir una postura crítica por defecto ante información sensacionalista.
+#### TikTok (ByteDance)
+*   **Licencia:** "Incondicional, irrevocable, no exclusiva, libre de regalías, totalmente transferible y perpetua mundial".
+*   **Alcance:** Incluye derecho a reproducir grabaciones de sonido y usar imagen/voz del usuario.
+*   **Privacidad:** Recolección masiva de datos biométricos, ubicación y patrones de uso [22].
+
+#### WhatsApp (Meta)
+*   **Contenido:** Mensajes cifrados de extremo a extremo (Meta no lee el contenido *personal*).
+*   **Metadatos:** Recolecta metadatos (quién, cuándo, frecuencia), contactos, información del dispositivo y ubicación aproximada.
+*   **Negocios:** Chats con empresas *pueden* ser procesados/leídos por Meta o terceros para fines de marketing [23].
+
+---
+
+## 7. Sitios Informativos y Medios
+Atributos clave de los principales medios de noticias relevantes para el análisis.
+
+| Nombre | Enfoque | Marco | Propietario / Grupo | Tipo |
+| :--- | :--- | :--- | :--- | :--- |
+| **El Universal** | General / Político | Nacional (MX) | Familia Ealy Ortiz (Cía. Periodística Nacional) | Privado |
+| **La Jornada** | Político (Izquierda) | Nacional (MX) | DEMOS Desarrollo de Medios (Carmen Lira) | Privado |
+| **Aristegui Noticias** | Investigación / Crítico | Nacional (MX) | Carmen Aristegui (Aristegui Noticias Network) | Independiente |
+| **Milenio** | General / Negocios | Nacional (MX) | Grupo Multimedios (Fam. González) | Privado |
+| **Animal Político** | Investigación / Datos | Nacional (MX) | Daniel Eilemberg / Inversionistas Privados | Independiente |
+| **SinEmbargo** | Político / Crítico | Nacional (MX) | Familia Valladares / Jorge Zepeda P. | Independiente |
+| **BBC** | General / Internacional | Reino Unido | Corporación Pública (Royal Charter) | Público (Canon TV) [24] |
+| **Reuters** | Financiero / Noticias | Internacional | Thomson Reuters Corp. (Familia Thomson) | Privado [25] |
+| **The Guardian** | Progresista / Liberal | Reino Unido | The Scott Trust | Sin ánimo de lucro [26] |
+
+---
+
+## 8. Validez de la Información
+
+### Indicadores Epistemológicos (Verdad)
+1.  **Correspondencia:** ¿La información coincide con los hechos observables?
+2.  **Coherencia:** ¿La información no se contradice a sí misma ni a otros conocimientos probados?
+3.  **Consistencia:** ¿La fuente mantiene su versión a lo largo del tiempo?
+4.  **Falsabilidad:** ¿Es posible diseñar una prueba que pueda refutar la afirmación? (Criterio de Popper).
+
+### Indicadores Digitales (Autenticidad)
+1.  **Autoría:** ¿Quién lo dice? ¿Es un bot, una persona real, una institución?
+2.  **Trazabilidad:** ¿Podemos seguir la ruta del dato hasta su origen primario?
+3.  **Temporalidad:** ¿Es información actual o reciclada fuera de contexto?
+4.  **Incentivos:** ¿Qué gana la fuente al publicar esto? (Clickbait, agenda política).
+
+---
+
+## 9. Referencias
+[1] Steup, M., & Neta, R. (2020). "Epistemology". *The Stanford Encyclopedia of Philosophy*.
+[2] Rowley, J. (2007). "The wisdom hierarchy: representations of the DIKW hierarchy". *Journal of Information Science*.
+[3] Shannon, C. E. (1948). "A Mathematical Theory of Communication". *Bell System Technical Journal*.
+[4] Cover, T. M., & Thomas, J. A. (2006). *Elements of Information Theory*. Wiley-Interscience.
+[5] MacKay, D. J. C. (2003). *Information Theory, Inference and Learning Algorithms*. Cambridge University Press.
+[6] Unión Europea. (2016). *Reglamento General de Protección de Datos (GDPR)*.
+[7] Unión Europea. (2022). *Digital Services Act (DSA)*.
+[8] U.S. Congress. (1996). *Communications Decency Act, Section 230*.
+[9] U.S. Congress. (2018). *Clarifying Lawful Overseas Use of Data (CLOUD) Act*.
+[10] Congreso de la Unión (México). (2010). *Ley Federal de Protección de Datos Personales en Posesión de los Particulares*.
+[11] Diario Oficial de la Federación. (2021). *Decreto por el que se adiciona la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia (Ley Olimpia)*.
+[12] IFT. (2014). *Ley Federal de Telecomunicaciones y Radiodifusión*.
+[13] Diario Oficial de la Federación. (2020). *Decreto de reformas a la Ley Federal del Derecho de Autor*.
+[14] Google. (2024). *Google Terms of Service*.
+[15] Microsoft. (2024). *Microsoft Services Agreement*.
+[16] Baidu. (2024). *Baidu Terms of Service*.
+[17] Yandex. (2024). *Yandex User Agreement*.
+[18] DuckDuckGo. (2024). *DuckDuckGo Terms of Service*.
+[19] Meta. (2024). *Facebook Terms of Service*.
+[20] YouTube. (2024). *YouTube Terms of Service*.
+[21] Meta. (2024). *Instagram Terms of Use*.
+[22] TikTok. (2024). *TikTok Terms of Service*.
+[23] WhatsApp. (2024). *WhatsApp Terms of Service & Privacy Policy*.
+[24] BBC. *Royal Charter*.
+[25] Thomson Reuters. *Annual Report*.
+[26] The Scott Trust. *Constitution*.
