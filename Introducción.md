@@ -20,18 +20,6 @@ Para este proyecto, la epistemología es el pilar fundamental que nos permite es
 ## Sobre la información y su contenido.
 Información es el nombre por el que se conoce un conjunto organizado de datos procesados que constituyen un mensaje que cambia el estado de conocimiento del sujeto o sistema que recibe dicho mensaje.
 
-### Jerarquía DIKW
-Es esencial comprender la estructura del conocimiento a través de la jerarquía DIKW (Data, Information, Knowledge, Wisdom):
-
-**Datos -> (Contexto) -> Información -> (Significado) -> Conocimiento -> (Entendimiento/Juicio) -> Sabiduría**
-
-1.  **Datos:** Símbolos que representan propiedades o características de la realidad (ej. "30°C"). Son la materia prima sin procesar.
-2.  **Información:** Datos procesados y organizados dentro de un contexto específico que les otorga significado (ej. "La temperatura ambiente es de 30°C").
-3.  **Conocimiento:** Información interiorizada y entendida, que permite la toma de decisiones o la resolución de problemas (ej. "A 30°C, el rendimiento de ciertos equipos disminuye").
-4.  **Sabiduría:** El uso juicioso del conocimiento para tomar decisiones éticas y visionarias a largo plazo.
-
-Desde el punto de vista de la ciencia de la computación, la información es un conocimiento explícito extraído como resultado de interacción con el entorno. A diferencia de los datos puros, la información posee una estructura útil que modifica las sucesivas interacciones del receptor.
-
 ### Teoría de la Información (Shannon & Weaver - 1948)
 La Teoría Matemática de la Comunicación, publicada por Claude Shannon en 1948 (y posteriormente en libro junto a Warren Weaver en 1949), establece las leyes matemáticas que rigen la transmisión y el procesamiento de la información. Se ocupa de la medición de la información (cuantificada en bits) y de la capacidad de los sistemas de comunicación para transmitirla de manera fiable, considerando el ruido. Es una rama fundamental de la teoría de la probabilidad y la estadística.
 
